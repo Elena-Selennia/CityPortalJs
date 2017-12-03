@@ -1,91 +1,76 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>
-			City Portal
-		</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-		<link href="style.css" rel="stylesheet">
+<head>
+    <title>
+        City Portal
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <h1 class="text-center">City Portal</h1>
+    <div id="container">
+        <div class="add_city add_link" id="add_city">
+            Add New City
+        </div>
+        <div class="panel-group" id="accordion"></div>
+    </div>
+    <div class="edit_city edit_popup" id="edit_city">
+        <div class="edit_title">
+            <h4>Edit city</h4>
+        </div>
+        <div class="edit_block">
+            <label class="city_name_label">City Name  <input type="text" value="" id="inputCityName" class="city_name_input details" required></label>
+        </div>
+        <div class="edit_buttons">
 
-	</head>
-	<body>
-			
-		<h1 class="text-center">City Portal</h1>
-		
-		<div id="container">
-		
-		<div class="add_city add_link" id="add_city">
-			Add New City
-		</div>
-		
-		<div class="panel-group" id="accordion">
-
-		
-		
-		
-		</div>
-		</div>
-			<div class="edit_city edit_popup" id="edit_city">
-				<div class="edit_title">
-					<h4>Edit city</h4>
-				</div>
-				<div class="edit_block">
-				<label class="city_name_label">City Name  <input type="text" value="" id="inputCityName" class="city_name_input details" required></label>
-								</div>
-				<div class="edit_buttons">
-					
-					<label>
-						Is Industrial
-						<div class="button_right ind_btn btn_edit_city" id="ind_button">I</div>
-					</label>
-					<label>
-						Is Criminal
-						<div class="button_right crim_btn btn_edit_city" id="crim_button">C</div>
-					</label>
-					<label>
-						Is Polluted
-						<div class="button_right pol_btn btn_edit_city" id="pol_button">P</div>
-					</label>
-									<div class="empty"></div>
-
-				</div>
-				<div class="footer_buttons">
-					<div class="ft_button cancel_btn" id="cancel_btn_city">Cancel</div>
-					<div class="ft_button save_btn" id="submit_btn_city">Save</div>
-									<div class="empty"></div>
-				</div>
-			</div>
-			
-			<div class="edit_area edit_popup" id="edit_area">
-				<div class="edit_title">
-					<h4>Edit area</h4>
-				</div>
-				<form name="city_edit_form">
-				<div class="edit_buttons">
-				<div class="edit_block">
-					<label class="city_name_label">Name  <input type="text" value="" id="inputAreaName" class="city_name_input details" required></label>
-				</div>
-				<div class="edit_block">
-					<label class="city_name_label">Description  <input type="text" value="" id="inputAreaDescription" class="city_name_input details" required></label>
-				</div>
-				<div class="edit_block">
-					<label class="city_name_label">Citizens  <input type="text" value="" id="inputAreaCitizens" class="city_name_input details"></label>
-				<div class="empty"></div>
-				</div>
-				</div>
-				<div class="footer_buttons">
-					<div class="ft_button cancel_btn" id="cancel_btn_area">Cancel</div>
-					<div class="ft_button save_btn" id="submit_btn_area">Save</div>
-									<div class="empty"></div>
-				</div>
-			</form>
-		</div>
-				
-		<script src="script.js"></script>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		
-	</body>
+            <label>
+                Is Industrial
+                <div class="button_right ind_btn btn_edit_city" id="ind_button">I</div>
+            </label>
+            <label>
+                Is Criminal
+                <div class="button_right crim_btn btn_edit_city" id="crim_button">C</div>
+            </label>
+            <label>
+                Is Polluted
+                <div class="button_right pol_btn btn_edit_city" id="pol_button">P</div>
+            </label>
+            <div class="empty"></div>
+        </div>
+        <div class="footer_buttons">
+            <div class="ft_button cancel_btn" id="cancel_btn_city">Cancel</div>
+            <div class="ft_button save_btn" id="submit_btn_city">Save</div>
+            <div class="empty"></div>
+        </div>
+    </div>
+    <div class="edit_area edit_popup" id="edit_area">
+        <div class="edit_title">
+            <h4>Edit area</h4>
+        </div>
+        <form name="city_edit_form">
+            <div class="edit_buttons">
+                <div class="edit_block">
+                    <label class="city_name_label">Name  <input type="text" value="" id="inputAreaName" class="city_name_input details" required></label>
+                </div>
+                <div class="edit_block">
+                    <label class="city_name_label">Description  <input type="text" value="" id="inputAreaDescription" class="city_name_input details" required></label>
+                </div>
+                <div class="edit_block">
+                    <label class="city_name_label">Citizens  <input type="text" value="" id="inputAreaCitizens" class="city_name_input details"></label>
+                    <div class="empty"></div>
+                </div>
+            </div>
+            <div class="footer_buttons">
+                <div class="ft_button cancel_btn" id="cancel_btn_area">Cancel</div>
+                <div class="ft_button save_btn" id="submit_btn_area">Save</div>
+                <div class="empty"></div>
+            </div>
+        </form>
+    </div>
+    <script src="resources/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
